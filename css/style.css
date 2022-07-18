@@ -94,11 +94,10 @@
 
 .wrapper {
     position: relative;
-    /* width: 100%; */
     max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 100px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    padding-left: 100px;
 }
 
 body {
@@ -110,8 +109,7 @@ a {
 
 /* header styles start*/
 .header {
-    padding: 0 85px;
-    /* margin-top: 25px; */
+    /* padding: 0 85px; */
     position: absolute;
 }
 .user-icon {
@@ -135,18 +133,16 @@ a {
 
 /* first content */
 
-/* .first-content {
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    /* display: flex; 
-    align-items: center;
-} */
 .hero-content {
     display: grid;
     grid-template-columns: repeat(2,auto);
-    /* display: flex; */
     align-items: center;
     justify-items: center;
+}
+.txt-content {
+    width: 30%;
+    padding-top: 165px;
+    padding-right: 150px;
 }
 .text-content_title {
     font-family: 'Montserrat',sans-serif;
@@ -154,14 +150,20 @@ a {
     font-weight: 700;
     font-size: 64px;
     line-height: 70px;
-    display: flex;
-    align-items: flex-end;
     color: #FFFFFF;
     margin-bottom: 88px;
-    /* margin-right: 100px; */
 }
 .content-block {
     display: flex;
+}
+.intro-line {
+    /* position: absolute; */
+    /* display: block; */
+    width: 139px;
+    height: 4px;
+    background-color: #fff;
+    /* border: 1px solid #FFFFFF; */
+    transform: rotate(120deg);
 }
 .content-block_blur {
     background: rgba(96, 92, 234, 0.5);
@@ -183,29 +185,24 @@ a {
     max-width: 380px;
     margin-left: 31px;
 }
+.img-content {
+    position: relative;
+}
 .img-content img {
-    /* max-width: 400px; */
-    z-index: 1;
+    width: 100%;
 }
 .img-content_blur {
-    /* position: fixed; */
+    background: url(../img/pic/phone.png) no-repeat;
     position: absolute;
-    background: rgba(250, 0, 255, 0.2);
-    filter: blur(250px);
-    /* transform: rotate(-105.26deg); */
-    width: 662.63px;
-    height: 783.03px;
-    /* z-index: 1; */
+    width: 100%;
 }
 .first-content-footer {
     display: flex;
-    /* display: grid; */
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     padding: 0 100px;
-    /* grid-gap: 400px; */
     justify-content: space-between;
-    margin-right: 80px;
+    margin-bottom: 150px;
 }
 .first-content-footer_title {
     font-family: 'Montserrat',sans-serif;
@@ -216,25 +213,24 @@ a {
     color: #FFFFFF;
     text-transform: uppercase;
 }
-.first-content-footer_link {
-    margin-right: 80px;
-    max-width: 377px;
-    margin: 0;
+.first-content_link {
+    margin-right: 30px;
 }
-.first-content-footer_link img {
-    margin-right: 20px;
-}
-.first-content-footer_link img:last-child {
+.first-content_link:last-child {
     margin: 0;
 }
 .first-content-coockie {
-    display: flex;
+    position: fixed;
+    /* display: flex; */
+    display: none;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 35px 25px 35px 100px;
+    justify-content: space-around;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 30px 0 30px 0;
     background: #212834;
     align-items: center;
-    margin: 15px 0 60px 0;
 }
 .first-content-coockie_desc {
     font-family: 'Noto Sans',sans-serif;
@@ -246,13 +242,6 @@ a {
 }
 .first-content-coockie_btn {
     display: inline-block;
-    /* width:100%; */
-    padding: 15px 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 0.5px solid #FFFFFF;
-    border-radius: 6px;
-}
-.first-content-coockie_btn a {
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
@@ -261,6 +250,16 @@ a {
     text-align: center;
     color: #FFFFFF;
     text-transform: uppercase;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid #FFFFFF;
+    border-radius: 6px;
+} 
+.close-coockie-block {
+    display: block;
+}
+.first-content-coockie.active {
+    display: none;
 }
 
 /* second ccontent */
@@ -279,9 +278,12 @@ a {
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    padding: 65px 95px;
+    padding: 65px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 21px;
+}
+.item-title {
+    margin-bottom: 30px;
 }
 .title {
     font-family: 'Noto Sans';
@@ -299,13 +301,9 @@ a {
     line-height: 33px;
     text-decoration-line: underline;
     color: #FFFFFF;
-    text-decoration: none;
 }
 .content {
     display: flex;
-}
-.text-content {
-    margin-top: 185px;
 }
 .second-content_title {
     font-family: 'Montserrat',sans-serif;
@@ -314,7 +312,6 @@ a {
     font-size: 51px;
     line-height: 62px;
     color: #FFFFFF;
-    /* max-width: 358px; */
     margin-bottom: 25px;
 
 }
@@ -331,16 +328,18 @@ a {
     position: absolute;
     width: 85px;
     height: 85px;
-    left: 1116px;
-    /* top: 1686px; */
     background: #F101BF;
-    /* opacity: 0.7; */
+    opacity: 0.7;
     filter: blur(100px);
 }
 
 /*third content styles*/
 .third-content {
-    margin-bottom: 205px;
+    background: url(../img/pic/third-content_bg-with-gradient.png) no-repeat center, linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%);;
+    position: relative;
+
+    background: linear-gradient(179.83deg, #000000 -3.1%, rgba(0, 0, 0, 0) 56.76%, #000000 83.92%);;
+    margin-bottom: 30%;
 }
 .third-content_bg  {
     width: 100%;
@@ -351,39 +350,70 @@ a {
     flex-wrap: nowrap;
     align-items: flex-end;
     position: absolute;
-    transform: translateY(-90%);
+    /* transform: translateY(40%); */
+    top: 40%;
 }
 .third-content-id {
     margin-bottom: 70px;
 }
 .third-content_pic {
-    
     padding-left: 100px;
-    /* transform: translateY(-90%); */
 }
 .third-content_phone-2 {
     margin: 0 130px 0 50px;
 }
 
-
 /* tool styles */
 .tool {
     display: flex;
     flex-wrap: nowrap;
+    margin-bottom: 15%;
 }
 .tool-text {
-    padding-left: 100px;
     margin-right: 30px;
 }
 
 /* main styles end*/
 
 /* order styles */
-
-.order_bg {
-    width: 100%;
-    background-size: cover;
+.link {
+    margin-top: 60px;
 }
+.order {
+    position: relative;
+    display: flex;
+}
+.order-text {
+    position: absolute;
+    transform: translateY(-35%);
+    padding-left: 100px;
+}
+.order-phone {
+    display: flex;
+    transform: translateX(-35%);
+}
+.order-phone-1 {
+    margin: 0 80px;
+    transform: translateY(-60%);
+}
+.order-phone-2 {
+    transform: translateY(-15%);
+}
+
+
+/*scan code style*/
+
+.scan-code {
+    position: relative;
+    background: url(../img/pic/notab_bg.png);
+}
+/* .scan-code_bg {
+    position: relative;
+} */
+.scan-code_img {
+    position: absolute;
+}
+
 
 /* header styles start*/
 
