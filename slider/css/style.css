@@ -1,0 +1,119 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e7d3d3;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-wrap {
+    display: flex;
+    width: 100%;
+    margin: auto auto;
+    justify-content: center;
+}
+
+.slider {
+    max-width: 800px;
+    width: 100%;
+    height: 490px;
+    position: relative;
+    box-shadow: 10px 10px 44px -10px rgba(0, 0, 0, 0.75);
+    overflow: hidden;
+}
+
+.slider-list {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: -800px;
+    width: 10000px;
+}
+
+.slider-item {
+    width: 800px;
+    height: 100%;
+    font-size: 200px;
+    text-align: center;
+}
+.slider-list.shifting {
+    transition: left .2s ease-out;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.dots-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.dots-item.active {
+    background-color: #000;
+}
+
+span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+span:last-child {
+    margin-right: 0;
+}
+
+@keyframes slider {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+}
+
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+}
+
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slider .prev:hover, .slider .next:hover {
+    background-color: rgb(181 184 207 / 80%);
+}
