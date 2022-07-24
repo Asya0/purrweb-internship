@@ -37,9 +37,8 @@ function slide(wrapper, items, prev, next, animationTime) {
 		})
 	});
 
-	let playAutoId = setTimeout(function playAuto() {
+	let autoPlayId = setInterval(function playAuto() {
 		moveSlide('next');
-		playAutoId = setTimeout(playAuto, autoPlayTime);
 	}, autoPlayTime);
 
 	// Transition events
@@ -75,7 +74,10 @@ function slide(wrapper, items, prev, next, animationTime) {
 		}
 
 		allowMove = false;
-		clearTimeout(playAutoId)
+		clearInterval(autoPlayId);
+		autoPlayId = setInterval(function playAuto() {
+			moveSlide('next');
+		}, autoPlayTime);
 	}
 
 	function checkIndex() {
