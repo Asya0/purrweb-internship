@@ -524,7 +524,7 @@ a:hover {
     margin-top: 60px;
 }
 
-.order-bg {
+.order-bg.mobile-hidden {
     display: flex;
     align-items: center;
     position: relative;
